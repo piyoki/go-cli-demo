@@ -8,8 +8,10 @@ A simple CLI application written in Golang
 cd golang\introduction\part-4.commandline
 docker build . -t videos
 
+```
+
 ## Run
 
+```bash
 docker run -it go-cli-demo get --help
-
 ```
