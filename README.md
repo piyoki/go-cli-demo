@@ -5,7 +5,7 @@ A simple CLI application written in Golang
 ## Build
 
 ```bash
-docker build . -t videos
+docker build . -t go-cli-demo
 
 ```
 
