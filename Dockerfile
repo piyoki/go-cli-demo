@@ -1,17 +1,16 @@
 FROM golang:1.15-alpine as dev
 
-WORKDIR /work
+WORKDIR /workspace
 
 FROM golang:1.15-alpine as build
 
-WORKDIR /videos
-COPY * /videos/
-RUN go build -o videos
+WORKDIR /app
+COPY * /app/
+RUN go build -o app
 
 
 FROM alpine as runtime
-COPY --from=build /videos/videos /usr/local/bin/videos
-COPY ./videos.json /
+COPY --from=build /app/app /usr/local/bin/app
 COPY run.sh /
 RUN chmod +x /run.sh
 ENTRYPOINT [ "./run.sh" ]
