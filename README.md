@@ -13,7 +13,7 @@ docker build . -t network-cli-demo
 
 ```bash
 docker run -it network-cli-demo --help
-docker run -it network-cli-demo ns google.com
-docker run -it network-cli-demo ip google.com
-docker run -it network-cli-demo mx google.com
+docker run -it network-cli-demo ns --host google.com
+docker run -it network-cli-demo ip --host google.com
+docker run -it network-cli-demo mx --host google.com
 ```
